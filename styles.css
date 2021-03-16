@@ -15,6 +15,27 @@ body {
     background: linear-gradient(135deg, #313131 10%, #1b1b1b 100%);
 }
 
+body::before, body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+}
+
+body::before {
+    clip-path: circle(30% at left 20%);
+    background: linear-gradient(135deg, #919191 10%, #a7a7a7);
+}
+
+body::after {
+    clip-path: circle(15% at right 90%);
+    background: linear-gradient(135deg, #919191 10%, #a7a7a7);
+}
+
+
 
 /*=================
 Header Styles
@@ -89,6 +110,7 @@ header .menu li {
     width: 40%;
     margin: 100px 0 0 50px;
     color: #f1f1f1;
+    line-height: 1.4;
 }
 
 .text-content h2 {
