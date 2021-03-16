@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #313131 10%, #1b1b1b 100%);
+}
+
+
+/*=================
+Header Styles
+==================== */
+header {
+    height: 85vh;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    margin: 30px auto 20px;
+    position: relative;
+}
+
+header .navbar {
+    width: 100%;
+    display: flex;
+    padding: 35px 50px;
+    justify-content: space-between;
+}
+
+header .navbar .logo a {
+    font-size: 22px;
+    font-weight: 500;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+header .navbar .menu {
+    display: flex;
+}
+
+header .menu li {
+    list-style: none;
+    margin: 0 6px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out
+}
+
+.navbar .menu a:hover {
+    color: #dadada;
+}
+
+.navbar .buttons input {
+    color: #fefefe;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 17px;
+    margin: 0 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1b1b1b 10%, #313131 100%);
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar .buttons input:hover {
+    transform: scale(0.87)
+}
+
+.text-content {
+    width: 40%;
+    margin: 100px 0 0 50px;
+    color: #f1f1f1;
+}
+
+.text-content h2 {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.text-content p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.play-button {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    color: #fefefe;
+}
+
+.play-button .play-video {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.play-button .play-video::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 50px;
+    background: #000;
+    left: -58px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width:850px) {
+    header .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu {
+        margin: 10px 0 20px 0;
+    }
+
+    .text-content {
+        width: 70%;
+        margin: 30px 0 0 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+    }
+}
